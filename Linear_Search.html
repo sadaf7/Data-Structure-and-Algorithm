@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching element in an array</title>
+
+    <script>
+        let data = [10,65,47,98,45,62,15,75,19]
+
+        // let item = 75;
+        // let index = undefined;
+
+        // for (let i = 0; i < data.length; i++) {
+        //     if(data[i]===item){
+        //         index = i;
+        //          break;
+        //     }
+        // }
+        // console.log(index)
+
+        // dynamically
+        function handleSearch(){
+            let item = document.getElementById('item').value
+            item = parseInt(item)
+            let index = undefined;
+
+            for (let i = 0; i < data.length; i++) {
+                
+                if(data[i]===item){
+                    index = i;
+                    break;
+                }
+            }
+            alert(index)
+        }
+    </script>
+
+    
+</head>
+<body>
+    <input type="text" id="item" placeholder="Search data">
+    <button onclick="handleSearch()">Search</button>
+</body>
+</html>

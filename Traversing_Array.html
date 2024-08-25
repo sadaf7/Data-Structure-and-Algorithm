@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Traversing & Accesing</title>
+
+    <script>
+        let data = [9,10,25,14,35,14,65];
+
+        for (let i = 0; i < data.length; i++) {
+           console.log(data[i])
+            
+        }
+
+        // accessing array
+        function getElement(){
+            let el = document.getElementById('element').value
+            if(el<data.length && typeof parseInt(el)==='number' && el>=0){
+                alert(data[el])
+            } else{
+                alert('Invalid Index')
+            }
+        }
+    </script>
+</head>
+<body>
+    <input placeholder="Enter Index" type="text" id="element"/>
+    <button onclick="getElement()">Get</button>
+</body>
+</html>

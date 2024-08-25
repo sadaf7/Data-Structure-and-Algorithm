@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let data = [14,25,65,78,95,61,17]
+
+        // let newEl = 100;
+        let pos = 3;
+        
+        // insterting
+        // for (let i = data.length-1; i >= 0; i--) {
+            
+        //     if(i>=pos){
+        //         data[i+1] = data[i];
+
+        //         if(i==pos){
+        //             data[i] = newEl;
+        //         }
+        //     }
+        // }
+
+        // deleting
+        for (let i = pos; i < data.length; i++) {
+
+            if(i>=pos){
+                data[i] = data[i+1];
+            }
+        }
+        data.length -= 1
+        console.log(data)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleting element from an array</title>
+
+    <script>
+        let data = [10,23,25,65,47,96];
+        // let pos = 2;
+
+        // for (let i = pos; i < data.length-1; i++) {
+        //     if(i>=pos){
+        //         data[i] = data[i+1];  // Shift elements to the left to make space for the new element
+        //     }
+            
+        // }
+        // data.length -= 1;
+        // console.log(data)
+
+        function handleRemove(){
+            let pos = document.getElementById('pos').value
+            pos = parseInt(pos)
+
+            for (let i = pos; i < data.length-1; i++) {
+                if(i>=pos){
+                data[i] = data[i+1];  // Shift elements to the left to make space for the new element
+            }
+            }
+            data.length -= 1;
+            alert(data)
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="pos" placeholder="Enter Position">
+    <button onclick="handleRemove()">Remove</button>
+    
+</body>
+</html>
